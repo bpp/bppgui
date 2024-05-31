@@ -16,12 +16,12 @@ configuration editor `conphyig`, the use of which is briefly explained below.
 ## Installing the Conphyig Editor
 You will need to have `node.js` installed on your computer. See instructions at <https://nodejs.org/en/download/package-manager/current>.
 Once `node.js` is installed type the following in a terminal:
-	```
+```
 	git clone https://github.com/bpp/bppgui.git
 	cd bppgui
 	npm install
 	npm start
-	```
+```
 
 
 
