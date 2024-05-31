@@ -25,7 +25,8 @@ Open a control file using the `File/Open Control File` menu item. You will see a
 which you can press to run a syntax check on the current file. You can edit the file. Currently the key combinations for editing are emacs 
 specific (I will add vi style key combinations later as an option). You cannot currently copy and paste using the mouse, you will need to use emacs commands for that. 
 ![Conphyig Editor](https://github.com/bpp/bppgui/blob/main/Editor.png)
-To use the snippet configurator chooose the meny item `Snippets/Open Snippet Configurator`. There is an expandable tree of 
+To use the snippet configurator chooose the menu item `Snippets/Open Snippet Configurator`. There is an expandable tree of bpp control file variables
+on the left that you can click with the mouse. These are organized as `REQUIRED (ND)` (required variables with no default values), `REQUIRED (D)` (required variables with default values) and `OPTIONAL` (optional variables). A minimal control file must at least specify all the `REQUIRED (ND)` variables. Use the snippet configurator to create an active snippet with values you specify and then in the Conphyig editor use the specified snippet shortcut to paste the snippet into the control file you are editing. For example, in the snippet shown you can insert the tauprior variable using by typing `tau` followed by the TAB key in the Conphyig editor.
 ![Snippet Configurator](./Snippet.png)
 
 
