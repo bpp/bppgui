@@ -1,5 +1,5 @@
 ![Conphyig Editor](https://github.com/bpp/bppgui/blob/main/Editor.png)
-![Snippet Configurator](./Snippet.png)
+
 
 # bppgui
 Graphical tools for editing input files and viewing output of bpp program
@@ -18,11 +18,14 @@ You will need to have `node.js` installed on your computer. See instructions at 
 Once `node.js` is installed type the following in a terminal:
 ```
 	git clone https://github.com/bpp/bppgui.git
-	cd bppgui
+	cd bppgui/src/filetools
 	npm install
 	npm start
 ```
 
-
+## Using the Conphyig Editor
+Open a control file using the `File/Open Control File` menu item. You will see a button labelled `check syntax` on the lower left
+which you can press to run a syntax check on the current file. To use the snippet configurator chooose the meny item `Snippets/Open Snippet Configurator`. There is an expandable tree of 
+![Snippet Configurator](./Snippet.png)
 
 
