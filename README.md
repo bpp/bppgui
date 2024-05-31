@@ -1,6 +1,3 @@
-![Conphyig Editor](https://github.com/bpp/bppgui/blob/main/Editor.png)
-
-
 # bppgui
 Graphical tools for editing input files and viewing output of bpp program
 
@@ -25,7 +22,10 @@ Once `node.js` is installed type the following in a terminal:
 
 ## Using the Conphyig Editor
 Open a control file using the `File/Open Control File` menu item. You will see a button labelled `check syntax` on the lower left
-which you can press to run a syntax check on the current file. To use the snippet configurator chooose the meny item `Snippets/Open Snippet Configurator`. There is an expandable tree of 
+which you can press to run a syntax check on the current file. You can edit the file. Currently the key combinations for editing are emacs 
+specific (I will add vi style key combinations later as an option). You cannot currently copy and paste using the mouse, you will need to use emacs commands for that. 
+![Conphyig Editor](https://github.com/bpp/bppgui/blob/main/Editor.png)
+To use the snippet configurator chooose the meny item `Snippets/Open Snippet Configurator`. There is an expandable tree of 
 ![Snippet Configurator](./Snippet.png)
 
 
