@@ -1,0 +1,210 @@
+/* dimensions should match main window dimensions in filetools_main.js */
+
+.container {
+  width: 1300px;
+  height: 1000px;
+  margin-top: 0px;
+  padding: 0px;
+}
+
+/* overall left control panel */
+
+#leftpanel {
+  position: absolute;
+  left: 0px;
+}
+
+/* upper part of left control panel */
+
+.treeview {
+  position: absolute;
+  top: 20px;
+  padding: 0px;
+  width: 250px;
+  height: 260px;
+  left: 0px;
+  font-size: 10pt;
+  color: white;
+  font-family: "Fira Mono";
+  display: inline-block;
+}
+
+/* lower part of left control panel */
+
+#editcontrols {
+  position: absolute;
+  top: 280px;
+  width: 250px;
+  height: 490px;
+  left: 0px;
+}
+
+/* Ace editor properties -- active when control file is chosen */
+
+#editor {
+  position: absolute;
+  top: 40px;
+  left: 250px;
+  height: 750px;
+  width: 80%;
+}
+
+#mapconfig {
+  position: absolute;
+  top: 40px;
+  left: 250px;
+  height: 750px;
+  width: 80%;
+}
+
+/* Properties of About window initiated from main menu */
+
+.about {
+  width: 100%;
+}
+
+/* Properties of Syntax Check button -- active when control file is chosen */
+
+#synchk_button {
+  position: absolute;
+  width: 80%;
+  left: 25px;
+  bottom: 10px;
+}
+
+#welcome_screen {
+  display: block;
+  color: yellow;
+  font-size: 14pt;
+  font-family: "Fira Mono";
+  position: absolute;
+  left: 400px;
+  top: 200px;
+}
+
+.output {
+  margin-top: 40px;
+}
+
+#output-path {
+  font-weight: bold;
+}
+
+body {
+  background-color: black;
+}
+
+.wireframe {
+  outline: 0.1px solid white;
+}
+
+/* Properties of message/mode line at bottom of main page -- always active */
+
+#modeline {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  left: 0px;
+  top: 790px;
+  font-size: 10pt;
+  color: yellow;
+  background-color: black;
+  font-family: "Fira Mono";
+  font-weight: bold;
+  display: inline-block;
+  border-top: 0.1px solid rgb(39, 39, 42);
+}
+
+/* Properties of titlebar at top of main page -- always active */
+
+#titlebar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 40px;
+  width: 100%;
+  color: yellow;
+  font-family: "Fira Mono";
+  font-size: 10pt;
+  background-color: rgb(39, 39, 42);
+}
+
+/* Properties of box containing active project name at left of title bar */
+
+#projecttitlebox {
+  position: absolute;
+  left: 0px;
+  right: 300px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* Properties  of box containing file currently being edited at right of title bar */
+
+#filetitlebox {
+  position: absolute;
+  right: 0px;
+  width: 700px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+/* Properties for Project Tree Browser Begin */
+
+details details {
+  margin-left: 10pt;
+}
+summary[selected="true"] {
+  background-color: grey;
+}
+summary {
+  cursor: pointer;
+}
+summary:hover {
+  background-color: #c0e0ff;
+}
+summary::before {
+  content: "[+]";
+}
+details[class="project"][open] summary[class="project"]::before {
+  content: "[-]";
+}
+details[class="seqfiles"][open] summary[class="seqfiles"]::before {
+  content: "[-]";
+}
+details[class="sfiles"] summary::before {
+  content: "@ ";
+  color: yellow;
+}
+details[class="mapfiles"][open] summary[class="mapfiles"]::before {
+  content: "[-]";
+}
+details[class="mfiles"] summary::before {
+  content: "# ";
+  color: rgb(59, 99, 209);
+}
+summary {
+  list-style: none;
+}
+
+/* Hide the marker (if possible) if a node is a leaf node */
+
+summary:only-child::-webkit-details-marker {
+  color: transparent;
+}
+#display {
+  display: inline-block;
+  vertical-align: top;
+}
+.smenu {
+  font-family: "Fira Mono";
+}
+.vtype {
+  font-size: 10pt;
+  font-weight: bold;
+}
+.descr {
+  font-size: 10pt;
+}
+
+/* Properties for Project Tree Browser End */

@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Conphyig :: Snippet Configurator</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/snippetconfig.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="item snpfilename" id="snpfn"></div>
+      <div class="item smenu">
+        <div class="smenu" style="display: block">
+          <details class="cfvars">
+            <summary class="cfvars">CONTROL_VARIABLES</summary>
+            <details class="reqndef">
+              <summary class="reqndef">REQUIRED (ND)</summary>
+              <details class="rndefsnp">
+                <summary id="outfile">
+                  <span
+                    id="outfileL"
+                    style="color: rgb(255, 0, 0)"
+                    class="flags"
+                    >E</span
+                  >outfile
+                </summary>
+              </details>
+              <details class="rndefsnp">
+                <summary id="mcmcfile">
+                  <span
+                    id="mcmcfileL"
+                    style="color: rgb(255, 0, 0)"
+                    class="flags"
+                    >E</span
+                  >mcmcfile
+                </summary>
+              </details>
+              <details class="rndefsnp">
+                <summary id="seqfile">
+                  <span
+                    id="seqfileL"
+                    style="color: rgb(255, 0, 0)"
+                    class="flags"
+                    >E</span
+                  >seqfile
+                </summary>
+              </details>
+              <details class="rndefsnp">
+                <summary id="Imapfile">
+                  <span
+                    id="ImapfileL"
+                    style="color: rgb(255, 0, 0)"
+                    class="flags"
+                    >E</span
+                  >Imapfile
+                </summary>
+              </details>
+              <details class="rndefsnp">
+                <summary id="print">
+                  <span id="printL" style="color: rgb(255, 0, 0)" class="flags"
+                    >E</span
+                  >print
+                </summary>
+              </details>
+              <details class="rndefsnp">
+                <summary id="burnin">
+                  <span id="burninL" style="color: rgb(255, 0, 0)" class="flags"
+                    >E</span
+                  >burnin
+                </summary>
+              </details>
+              <details class="rndefsnp">
+                <summary id="sampfreq">
+                  <span
+                    id="sampfreqL"
+                    style="color: rgb(255, 0, 0)"
+                    class="flags"
+                    >E</span
+                  >sampfreq
+                </summary>
+              </details>
+              <details class="rndefsnp">
+                <summary id="nsample">
+                  <span
+                    id="nsampleL"
+                    style="color: rgb(255, 0, 0)"
+                    class="flags"
+                    >E</span
+                  >nsample
+                </summary>
+              </details>
+              <details class="rndefsnp">
+                <summary id="speciesandtree">
+                  <span
+                    id="speciesandtreeL"
+                    style="color: rgb(255, 0, 0)"
+                    class="flags"
+                    >E</span
+                  >species&tree
+                </summary>
+              </details>
+              <details class="rndefsnp">
+                <summary id="thetaprior">
+                  <span
+                    id="thetapriorL"
+                    style="color: rgb(255, 0, 0)"
+                    class="flags"
+                    >E</span
+                  >thetaprior
+                </summary>
+              </details>
+              <details class="rndefsnp">
+                <summary id="tauprior">
+                  <span
+                    id="taupriorL"
+                    style="color: rgb(255, 0, 0)"
+                    class="flags"
+                    >E</span
+                  >tauprior
+                </summary>
+              </details>
+            </details>
+            <details class="reqdef">
+              <summary class="reqdef">REQUIRED (D)</summary>
+              <details class="rdefsnp">
+                <summary id="seed">
+                  <span
+                    id="seedL"
+                    style="color: rgb(59, 99, 209); padding-right: 1px"
+                    >D</span
+                  >
+                  seed
+                </summary>
+              </details>
+              <details class="rdefsnp">
+                <summary id="usedata">
+                  <span
+                    id="usedataL"
+                    style="color: rgb(59, 99, 209); padding-right: 1px"
+                    >D</span
+                  >
+                  usedata
+                </summary>
+              </details>
+              <details class="rdefsnp">
+                <summary id="finetune">
+                  <span
+                    id="finetuneL"
+                    style="color: rgb(59, 99, 209); padding-right: 1px"
+                    >D</span
+                  >
+                  finetune
+                </summary>
+              </details>
+              <details class="rdefsnp">
+                <summary id="speciesdelimitation">
+                  <span
+                    id="speciesdelimitationL"
+                    style="color: rgb(59, 99, 209); padding-right: 1px"
+                    >D</span
+                  >
+                  speciesdelimitation
+                </summary>
+              </details>
+              <details class="rdefsnp">
+                <summary id="speciestree">
+                  <span
+                    id="speciestreeL"
+                    style="color: rgb(59, 99, 209); padding-right: 1px"
+                    >D</span
+                  >
+                  speciestree
+                </summary>
+              </details>
+              <details class="rdefsnp">
+                <summary id="nloci">
+                  <span
+                    id="nlociL"
+                    style="color: rgb(59, 99, 209); padding-right: 1px"
+                    >D</span
+                  >
+                  nloci
+                </summary>
+              </details>
+              <details class="rdefsnp">
+                <summary id="model">
+                  <span
+                    id="modelL"
+                    style="color: rgb(59, 99, 209); padding-right: 1px"
+                    >D</span
+                  >
+                  model
+                </summary>
+              </details>
+              <details class="rdefsnp">
+                <summary id="alphaprior">
+                  <span
+                    id="alphapriorL"
+                    style="color: rgb(59, 99, 209); padding-right: 1px"
+                    >D</span
+                  >
+                  alphaprior
+                </summary>
+              </details>
+              <details class="rdefsnp">
+                <summary id="cleandata">
+                  <span
+                    id="cleandataL"
+                    style="color: rgb(59, 99, 209); padding-right: 1px"
+                    >D</span
+                  >
+                  cleandata
+                </summary>
+              </details>
+              <details class="rdefsnp">
+                <summary id="locusrate">
+                  <span
+                    id="locusrateL"
+                    style="color: rgb(59, 99, 209); padding-right: 1px"
+                    >D</span
+                  >
+                  locusrate
+                </summary>
+              </details>
+              <details class="rdefsnp">
+                <summary id="clock">
+                  <span
+                    id="clockL"
+                    style="color: rgb(59, 99, 209); padding-right: 1px"
+                    >D</span
+                  >
+                  clock
+                </summary>
+              </details>
+              <details class="rdefsnp">
+                <summary id="heredity">
+                  <span
+                    id="heredityL"
+                    style="color: rgb(59, 99, 209); padding-right: 1px"
+                    >D</span
+                  >
+                  heredity
+                </summary>
+              </details>
+              <details class="rdefsnp">
+                <summary id="phase">
+                  <span
+                    id="phaseL"
+                    style="color: rgb(59, 99, 209); padding-right: 1px"
+                    >D</span
+                  >
+                  phase
+                </summary>
+              </details>
+            </details>
+            <details class="opts">
+              <summary class="opts">OPTIONAL</summary>
+              <details class="optsnp">
+                <summary id="speciesmodelprior">
+                  <span
+                    id="speciesmodelpriorL"
+                    style="color: rgb(12, 117, 54); padding-right: 1px"
+                    >@</span
+                  >
+                  speciesmodelprior
+                </summary>
+              </details>
+              <details class="optsnp">
+                <summary id="phiprior">
+                  <span
+                    id="phipriorL"
+                    style="color: rgb(12, 117, 54); padding-right: 1px"
+                    >@</span
+                  >
+                  phiprior
+                </summary>
+              </details>
+              <details class="optsnp">
+                <summary id="threads">
+                  <span
+                    id="threadsL"
+                    style="color: rgb(12, 117, 54); padding-right: 1px"
+                    >@</span
+                  >
+                  threads
+                </summary>
+              </details>
+              <details class="optsnp">
+                <summary id="checkpoint">
+                  <span
+                    id="checkpointL"
+                    style="color: rgb(12, 117, 54); padding-right: 1px"
+                    >@</span
+                  >
+                  checkpoint
+                </summary>
+              </details>
+              <details class="optsnp">
+                <summary id="constraintfile">
+                  <span
+                    id="constraintfileL"
+                    style="color: rgb(12, 117, 54); padding-right: 1px"
+                    >@</span
+                  >
+                  constraintfile
+                </summary>
+              </details>
+            </details>
+          </details>
+        </div>
+      </div>
+
+      <div class="item guiconfigurator">
+        <div class="vargui" id="guiopenmapfile" style="display: none">
+          <h2>Creat Map File</h2>
+          <p>Interface for creating a map file.</p>
+        </div>
+
+        <div class="vargui" id="guiImapfile" style="display: none">
+          <h2>Imapfile</h2>
+          <p>
+            Opens an Imap file that will be used to help complete other
+            configuration fields such as species&tree and phase.
+          </p>
+          <span>Imap file: </span><input id="ImapfileInput" type="file" />
+          <div class="imapbox" id="imapcontents" style="display: none"></div>
+        </div>
+
+        <div class="vargui" id="guiseed" style="display: none">
+          <h2>seed</h2>
+          <p>
+            Specifies the seed (a positive integer) used to initialize the
+            random number generator. A negative integer argument specifies that
+            the computer generate a random seed. A positive integer argument
+            specifies a particular seed to use.
+          </p>
+          <form class="sradio" id="sr1">
+            <input
+              type="radio"
+              id="sentropy"
+              name="seedradio"
+              value="negint"
+              checked="checked"
+            />
+            <label for="sentropy"
+              >Use computer entropy to get random seed value</label
+            ><br />
+            <input type="radio" id="svalue" name="seedradio" value="posint" />
+            <label for="svalue">Specify a fixed seed value</label><br />
+            <div id="seedscroll" style="display: none">
+              <input
+                id="sscroll"
+                type="number"
+                min="1"
+                max="100000000"
+                step="1"
+                value="1"
+                size="10"
+              />
+            </div>
+          </form>
+        </div>
+
+        <div class="vargui" id="guiusedata" style="display: none">
+          <h2>usedata</h2>
+          <p>
+            Use likelihood+prior for inference or instead turn off likelihood
+            and use only prior (useful for debugging or checking prior
+            distributions).
+          </p>
+          <div class="onoffbox">
+            <label class="switch">
+              <input type="checkbox" id="usedatachk" checked="checked" />
+              <span class="slider"></span>
+            </label>
+            <p id="usedataOnMsg" style="display: inline-block">
+              ON: Using Likelihood (Data) + Prior
+            </p>
+            <p id="usedataOffMsg" style="display: none">
+              OFF: Using Only Prior (No Data)
+            </p>
+          </div>
+        </div>
+
+        <div class="vargui" id="guioutfile" style="display: none">
+          <h2>outfile</h2>
+          <p>
+            Specifies the name (and optionally a path) for a file that will
+            receive output produced by the BPP program.
+          </p>
+          <div class="guivarbox" style="padding: 10px">
+            <p id="displayoutfile" style="padding-bottom: 10px"></p>
+            <div>
+              <p>New output file:</p>
+              <input id="chooseoutfiletext" type="text" /><button
+                id="chooseoutfilesave"
+              >
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="vargui" id="guimcmcfile" style="display: none">
+          <h2>mcmcfile</h2>
+          <p>
+            Specifies the name (and optionally a path) for a file that will
+            receive the MCMC variable values (one line per iteration of the
+            MCMC) produced by the BPP program.
+          </p>
+          <div class="guivarbox" style="padding: 10px">
+            <p id="displaymcmcfile" style="padding-bottom: 10px"></p>
+            <div>
+              <p>New MCMC file:</p>
+              <input id="choosemcmcfiletext" type="text" /><button
+                id="choosemcmcfilesave"
+              >
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="vargui" id="guiseqfile" style="display: none">
+          <h2>seqfile</h2>
+          <p>
+            Specifies the name (and optionally a path) for a file that contains
+            DNA or protein sequence data for input to the BPP program.
+          </p>
+          <div class="guivarbox" style="padding: 10px">
+            <p id="displayseqfile" style="padding-bottom: 10px"></p>
+            <div>
+              <p>New sequence data file:</p>
+              <input id="chooseseqfiletext" type="text" /><button
+                id="chooseseqfilesave"
+              >
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="vargui" id="guiburnin" style="display: none">
+          <h2>burnin</h2>
+          <p>
+            Specifies the number of MCMC iterations that should be discarded (as
+            burn-in) before parameter sampling from the chain begins. Increase
+            the burnin if the chain does not seem to be converging to a
+            stationary distribution before sampling begins.
+          </p>
+          <div class="guivarbox" style="padding: 10px">
+            <p id="displayburnin" style="padding-bottom: 10px"></p>
+            <label for="burninNo">Burnin:</label>
+            <input
+              type="number"
+              id="burninNo"
+              name="burninNoBox"
+              min="0"
+              max="1000000000"
+              value="10000"
+            />
+          </div>
+        </div>
+
+        <div class="vargui" id="guisampfreq" style="display: none">
+          <h2>sampfreq</h2>
+          <p>
+            Specifies the intervals at which samples of parameters are collected
+            from the MCMC and printed to the output file. Sampling at larger
+            intervals reduces the autocorrelation of the samples and also the
+            output file size.
+          </p>
+          <div class="guivarbox" style="padding: 10px">
+            <p id="displaysampfreq" style="padding-bottom: 10px"></p>
+            <label for="sampfreq">Sampling Frequency:</label>
+            <input
+              type="number"
+              id="sampfreqNo"
+              name="sampfreqNoBox"
+              min="1"
+              max="1000000"
+              value="2"
+            />
+          </div>
+        </div>
+
+        <div class="vargui" id="guinsample" style="display: none">
+          <h2>nsample</h2>
+          <p>
+            Specifies the number of samples from the MCMC that are to be written
+            to the output file (mcmcfile). The total number of MCMC iterations
+            is burnin + nsample × sampfreq.
+          </p>
+          <div class="guivarbox" style="padding: 10px">
+            <p id="displaynsample" style="padding-bottom: 10px"></p>
+            <label for="nsample">Number of Samples:</label>
+            <input
+              type="number"
+              id="nsampleNo"
+              name="nsampleNoBox"
+              min="1"
+              max="1000000000"
+              value="100000"
+            />
+          </div>
+        </div>
+
+        <div class="vargui" id="guiprint" style="display: none">
+          <h2>print</h2>
+          <p>
+            Specifies which variables are saved to the output file during an
+            MCMC analysis.
+          </p>
+          <div class="onoffbox">
+            <div>
+              <label class="switch">
+                <input type="checkbox" id="mcmcsampleschk" checked="checked" />
+                <span class="slider"></span>
+              </label>
+              <p id="mcmcsamplesOnMsg" style="display: inline-block">
+                ON: Saving MCMC samples (taus, thetas, trees)
+              </p>
+              <p id="mcmcsamplesOffMsg" style="display: none">
+                OFF: Not saving MCMC samples
+              </p>
+            </div>
+            <div>
+              <label class="switch">
+                <input type="checkbox" id="locusrateschk" />
+                <span class="slider"></span>
+              </label>
+              <p id="locusratesOnMsg" style="display: none">
+                ON: Saving locus rates
+              </p>
+              <p id="locusratesOffMsg" style="display: inline-block">
+                OFF: Not saving locus rates
+              </p>
+            </div>
+            <div>
+              <label class="switch">
+                <input type="checkbox" id="heredityscalarschk" />
+                <span class="slider"></span>
+              </label>
+              <p id="heredityscalarsOnMsg" style="display: none">
+                ON: Saving locus heredity scalars
+              </p>
+              <p id="heredityscalarsOffMsg" style="display: inline-block">
+                OFF: Not saving locus heredity scalars
+              </p>
+            </div>
+            <div>
+              <label class="switch">
+                <input type="checkbox" id="genetreeschk" />
+                <span class="slider"></span>
+              </label>
+              <p id="genetreesOnMsg" style="display: none">
+                ON: Saving locus gene trees
+              </p>
+              <p id="genetreesOffMsg" style="display: inline-block">
+                OFF: Not saving locus gene trees
+              </p>
+            </div>
+            <div>
+              <label class="switch">
+                <input type="checkbox" id="substitutionparameterschk" />
+                <span class="slider"></span>
+              </label>
+              <p id="substitutionparametersOnMsg" style="display: none">
+                ON: Saving locus substitution parameters
+              </p>
+              <p
+                id="substitutionparametersOffMsg"
+                style="display: inline-block"
+              >
+                OFF: Not saving locus substitution parameters
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="vargui" id="guifinetune" style="display: none">
+          <h2>finetune</h2>
+          <p>
+            Specifies whether to automatically adjust step sizes for parameter
+            proposals in MCMC or instead use manually specified step sizes.
+          </p>
+          <div class="onoffbox">
+            <label class="switch">
+              <input type="checkbox" id="finetunechk" checked="checked" />
+              <span class="slider"></span>
+            </label>
+            <p id="finetuneOnMsg" style="display: inline-block">
+              ON: Automatically Adjust Step Sizes
+            </p>
+            <p id="finetuneOffMsg" style="display: none">
+              OFF: Use Manually Specified Step Sizes
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="1" style="padding-left: 20px; text-align: left">
+                    Parameter
+                  </th>
+                  <th colspan="1" style="padding-left: 20px; text-align: left">
+                    Step-size
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding-left: 20px">Gene tree node ages (Gage)</td>
+                  <td style="padding-left: 20px">
+                    <input
+                      type="text"
+                      value="5.0"
+                      class="finetuneszval"
+                      id="gage"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px">
+                    Subtree pruning & regrafting (Gspr)
+                  </td>
+                  <td style="padding-left: 20px">
+                    <input
+                      type="text"
+                      value="0.001"
+                      class="finetuneszval"
+                      id="gspr"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px">
+                    Population size: Theta (thet)
+                  </td>
+                  <td style="padding-left: 20px">
+                    <input
+                      type="text"
+                      value="0.001"
+                      class="finetuneszval"
+                      id="thet"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px">
+                    Species divergence time: Tau (tau)
+                  </td>
+                  <td style="padding-left: 20px">
+                    <input
+                      type="text"
+                      value="0.001"
+                      class="finetuneszval"
+                      id="tau"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px">Mixing step (mix)</td>
+                  <td style="padding-left: 20px">
+                    <input
+                      type="text"
+                      value="0.3"
+                      class="finetuneszval"
+                      id="mix"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px">Locus rates (lrht)</td>
+                  <td style="padding-left: 20px">
+                    <input
+                      type="text"
+                      value="0.33"
+                      class="finetuneszval"
+                      id="lrht"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px">
+                    Introgression probability (phi)
+                  </td>
+                  <td style="padding-left: 20px">
+                    <input
+                      type="text"
+                      value="0.001"
+                      class="finetuneszval"
+                      id="phi"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px">
+                    Substitution model stationary freqs (pi)
+                  </td>
+                  <td style="padding-left: 20px">
+                    <input
+                      type="text"
+                      value="0.1"
+                      class="finetuneszval"
+                      id="pi"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px">
+                    Substitution model Q matrix (qmat)
+                  </td>
+                  <td style="padding-left: 20px">
+                    <input
+                      type="text"
+                      value="0.3"
+                      class="finetuneszval"
+                      id="qmat"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px">
+                    Alpha: among-site subst rate variation (alfa)
+                  </td>
+                  <td style="padding-left: 20px">
+                    <input
+                      type="text"
+                      value="0.1"
+                      class="finetuneszval"
+                      id="alfa"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px">
+                    Mean among-locus subst rate (mubr)
+                  </td>
+                  <td style="padding-left: 20px">
+                    <input
+                      type="text"
+                      value="0.1"
+                      class="finetuneszval"
+                      id="mubr"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px">
+                    Mean among-species subst rate variance (nubr)
+                  </td>
+                  <td style="padding-left: 20px">
+                    <input
+                      type="text"
+                      value="0.1"
+                      class="finetuneszval"
+                      id="nubr"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px">
+                    Mean among-species subst rate (mu_i)
+                  </td>
+                  <td style="padding-left: 20px">
+                    <input
+                      type="text"
+                      value="0.1"
+                      class="finetuneszval"
+                      id="mui"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px">
+                    Among-species subst rate variance (nu_i)
+                  </td>
+                  <td style="padding-left: 20px">
+                    <input
+                      type="text"
+                      value="0.1"
+                      class="finetuneszval"
+                      id="nui"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px">Branch rates (brte)</td>
+                  <td style="padding-left: 20px">
+                    <input
+                      type="text"
+                      value="0.1"
+                      class="finetuneszval"
+                      id="brte"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="vargui" id="guispeciesdelimitation" style="display: none">
+          <h2>speciesdelimitation</h2>
+          <p>
+            Specifies whether to delimit species (ON) or to instead treat the
+            assignments of sequences to species as known (OFF), and as specified
+            in the Imap file.
+          </p>
+          <div class="onoffbox">
+            <label class="switch">
+              <input type="checkbox" id="delimitspecieschk" />
+              <span class="slider"></span>
+            </label>
+            <p id="delimitspeciesOnMsg" style="display: none">
+              ON: Delimiting Species
+            </p>
+            <p id="delimitspeciesOffMsg" style="display: inline-block">
+              OFF: Treating Species as Fixed (Delimited)
+            </p>
+          </div>
+        </div>
+
+        <div class="vargui" id="guispeciestree" style="display: none">
+          <h2>speciestree</h2>
+          <p>
+            Specifies whether to infer species (ON) or to instead treat the
+            species tree as fixed (OFF), and as specified in the control file.
+          </p>
+          <div class="onoffbox">
+            <label class="switch">
+              <input type="checkbox" id="speciestreechk" />
+              <span class="slider"></span>
+            </label>
+            <p id="speciestreeOnMsg" style="display: none">
+              ON: Inferring Species Tree
+            </p>
+            <p id="speciestreeOffMsg" style="display: inline-block">
+              OFF: Treating Species Tree as Fixed
+            </p>
+          </div>
+        </div>
+
+        <div class="vargui" id="guicleandata" style="display: none">
+          <h2>cleandata</h2>
+          <p>
+            Specifies whether columns in the alignment which have gaps or
+            ambiguity characters will be removed prior to analysis, or will
+            instead be retained for use in the likelihood calculation.
+          </p>
+          <div class="onoffbox">
+            <label class="switch">
+              <input type="checkbox" id="cleandatachk" />
+              <span class="slider"></span>
+            </label>
+            <p id="cleandataOnMsg" style="display: none">
+              ON: Gaps/Ambiguity Sites Removed
+            </p>
+            <p id="cleandataOffMsg" style="display: inline-block">
+              OFF: Gaps/Ambiguity Sites Retained
+            </p>
+          </div>
+        </div>
+
+        <div class="vargui" id="guinloci" style="display: none">
+          <h2>nloci</h2>
+          <p>
+            Specifies the number of loci to be analyzed (must be less than the
+            number of loci contained in the sequence data file). If nloci is
+            less than the total number of loci in the sequence data file the
+            first nloci in that file will be analyzed.
+          </p>
+          <div class="guivarbox" style="padding: 10px">
+            <p id="displaynloci" style="padding-bottom: 10px"></p>
+            <label for="nlociVal">Number of Loci:</label>
+            <input
+              type="number"
+              id="nlociVal"
+              name="nlociBox"
+              min="1"
+              max="1000000000"
+              value="1"
+            />
+          </div>
+        </div>
+
+        <div class="vargui" id="guilocusrate" style="display: none">
+          <h2>locusrate</h2>
+          <p>
+            Specifies the model of substitution rate variation among loci as
+            well as the parameters and prior if required. There are 3 models:
+            constant rates among loci, variable (estimated) rates among loci,
+            and variable (specified) rates among loci. The variable specified
+            rates option requires a file be specified in which each line
+            contains a relative rate and the number of lines equals the number
+            of loci.
+          </p>
+          <div class="guivarbox">
+            <div>
+              <h3>Model of Among-Locus Rate Variation</h3>
+              <form style="display: inline">
+                 
+                <input
+                  type="radio"
+                  id="constantrates"
+                  name="dataType"
+                  value="0"
+                  checked="checked"
+                />
+                  <label for="constantrates">Constant</label>  
+                <input
+                  type="radio"
+                  id="varestimatedrates"
+                  name="dataType"
+                  value="1"
+                />
+                  <label for="varestimatedrates">Estimated</label>  
+                <input
+                  type="radio"
+                  id="varspecifiedrates"
+                  name="dataType"
+                  value="2"
+                />
+                  <label for="varspecifiedrates">Specified</label>
+              </form>
+            </div>
+            <div id="Varconstantrateschoice" style="display: inline-block">
+              <h3>Constant Rates</h3>
+              <div style="padding: 10px">
+                <p id="displaycrfile" style="padding-bottom: 10px"></p>
+                <div>
+                  <p>
+                    Assuming equal and constant substitution rates across loci
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="Varestimatedrateschoice" style="display: none">
+              <h3>Variable Estimated Rates</h3>
+              <div style="padding: 10px">
+                <p id="displayvarerfile" style="padding-bottom: 10px"></p>
+                <div>
+                  <h4>Prior Average Substitution Rate Across Loci</h4>
+                  <div class="slidecontainer" id="slide1">
+                    <form>
+                      <input
+                        id="meanratealphaslider"
+                        type="range"
+                        name="amountRange"
+                        min="0.01"
+                        step="0.01"
+                        max="10"
+                        value="1.0"
+                      />
+                      <input
+                        id="meanratealphatext"
+                        type="number"
+                        name="amountInput"
+                        min="0.01"
+                        step="0.01"
+                        max="10"
+                        value="1.0"
+                      /><span style="margin-left: 2px"
+                        >:Alpha (Average Rate)</span
+                      >
+                    </form>
+                  </div>
+                  <div class="slidecontainer" id="slide2">
+                    <form>
+                      <input
+                        id="meanratebetaslider"
+                        type="range"
+                        name="amountRange"
+                        min="0.01"
+                        step="0.01"
+                        max="10"
+                        value="1.0"
+                      />
+                      <input
+                        id="meanratebetatext"
+                        type="number"
+                        name="amountInput"
+                        min="0.01"
+                        step="0.01"
+                        max="10"
+                        value="1.0"
+                      />
+                      <span style="margin-left: 2px">:Beta (Average Rate)</span>
+                    </form>
+                    <div id="meanvarmu">
+                      <p>Mean: 1.000000 Var: 1.000000</p>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h4>Prior for Locus-specific Substitution Rates</h4>
+                  <div class="slidecontainer" id="slide3">
+                    <form>
+                      <input
+                        id="locusalphaslider"
+                        type="range"
+                        name="amountRange"
+                        min="0.01"
+                        step="0.01"
+                        max="10"
+                        value="1.0"
+                      />
+                      <input
+                        id="locusalphatext"
+                        type="number"
+                        name="amountInput"
+                        min="0.01"
+                        step="0.01"
+                        max="10"
+                        value="1.0"
+                      /><span style="margin-left: 2px"
+                        >:Alpha (Locus Rates)</span
+                      >
+                    </form>
+                    <form style="display: inline">
+                       
+                      <input
+                        type="radio"
+                        id="locusiidprior"
+                        name="dataType"
+                        value="0"
+                        checked="checked"
+                      />
+                        <label for="locusiidprior">iid (Hierarchical)</label>  
+                      <input
+                        type="radio"
+                        id="locusdirprior"
+                        name="dataType"
+                        value="1"
+                      />
+                        <label for="locusdirprior">dir (Dirichlet)</label>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="Varspecifiedrateschoice" style="display: none">
+              <h3>Variable Specified Rates</h3>
+              <div style="padding: 10px">
+                <p id="displayvarsrfile" style="padding-bottom: 10px"></p>
+                <div>
+                  <p>File name:</p>
+                  <input id="choosevarsrfiletext" type="text" /><button
+                    id="choosevarsrfilesave"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vargui" id="guiheredity" style="display: none">
+          <h2>heredity</h2>
+          <p>
+            Specifies whether proportional differences exist between all θ
+            values for different loci, and if so whether the proportionality
+            multipliers (called inheritance scalars) are estimated from the
+            data, or set to specified fixed values. If inheritance scalars are
+            estimated, the parameters of the prior also must be specified.
+          </p>
+          <div class="guivarbox">
+            <div>
+              <h3>Model of Among-Locus Variation in θ</h3>
+              <form style="display: inline">
+                 
+                <input
+                  type="radio"
+                  id="constanttheta"
+                  name="dataType"
+                  value="0"
+                  checked="checked"
+                />
+                  <label for="constanttheta">Constant</label>  
+                <input
+                  type="radio"
+                  id="varestimatedtheta"
+                  name="dataType"
+                  value="1"
+                />
+                  <label for="varestimatedtheta">Estimated</label>  
+                <input
+                  type="radio"
+                  id="varspecifiedtheta"
+                  name="dataType"
+                  value="2"
+                />
+                  <label for="varspecifiedtheta">Specified</label>
+              </form>
+            </div>
+            <div id="Varconstantthetachoice" style="display: inline-block">
+              <h3>Constant Theta</h3>
+              <div style="padding: 10px">
+                <p id="displayctfile" style="padding-bottom: 10px"></p>
+                <div>
+                  <p>Assuming equal and constant theta across loci</p>
+                </div>
+              </div>
+            </div>
+            <div id="Varestimatedthetachoice" style="display: none">
+              <h3>Variable Estimated Theta</h3>
+              <div style="padding: 10px">
+                <p id="displayvaretfile" style="padding-bottom: 10px"></p>
+                <div>
+                  <h4>Prior Theta Scalar Multiplier Across Loci</h4>
+                  <div class="slidecontainer" id="tslide1">
+                    <form>
+                      <input
+                        id="meanthetaalphaslider"
+                        type="range"
+                        name="amountRange"
+                        min="0.01"
+                        step="0.01"
+                        max="10"
+                        value="1.0"
+                      />
+                      <input
+                        id="meanthetaalphatext"
+                        type="number"
+                        name="amountInput"
+                        min="0.01"
+                        step="0.01"
+                        max="10"
+                        value="1.0"
+                      /><span style="margin-left: 2px">:Alpha</span>
+                    </form>
+                  </div>
+                  <div class="slidecontainer" id="tslide2">
+                    <form>
+                      <input
+                        id="meanthetabetaslider"
+                        type="range"
+                        name="amountRange"
+                        min="0.01"
+                        step="0.01"
+                        max="10"
+                        value="1.0"
+                      />
+                      <input
+                        id="meanthetabetatext"
+                        type="number"
+                        name="amountInput"
+                        min="0.01"
+                        step="0.01"
+                        max="10"
+                        value="1.0"
+                      />
+                      <span style="margin-left: 2px">:Beta</span>
+                    </form>
+                    <div id="meanvartheta">
+                      <p>Mean: 1.000000 Var: 1.000000</p>
+                    </div>
+                  </div>
+                </div>
+                <div></div>
+              </div>
+            </div>
+            <div id="Varspecifiedthetachoice" style="display: none">
+              <h3>Variable Specified Theta Scalars</h3>
+              <div style="padding: 10px">
+                <p id="displayvarstfile" style="padding-bottom: 10px"></p>
+                <div>
+                  <p>File name:</p>
+                  <input id="choosevarstfiletext" type="text" /><button
+                    id="choosevarstfilesave"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vargui" id="guiclock" style="display: none">
+          <h2>clock</h2>
+          <p>Specifies whether a strict clock...</p>
+          <div class="guivarbox">
+            <div>
+              <h3>Clock Model</h3>
+              <form style="display: inline">
+                 
+                <input
+                  type="radio"
+                  id="strictclock"
+                  name="dataType"
+                  value="0"
+                  checked="checked"
+                />
+                  <label for="strictclock">Strict</label>  
+                <input
+                  type="radio"
+                  id="variableiid"
+                  name="dataType"
+                  value="1"
+                />
+                  <label for="variableiid">Independent</label>  
+                <input
+                  type="radio"
+                  id="variableauto"
+                  name="dataType"
+                  value="2"
+                />
+                  <label for="variableauto">Autocorrelated</label>
+              </form>
+            </div>
+            <div id="Varstrictclockchoice" style="display: inline-block">
+              <h3>Strict Clock</h3>
+              <div style="padding: 10px">
+                <p id="displaycrfile" style="padding-bottom: 10px"></p>
+                <div>
+                  <p>
+                    Assuming a strict molecular clock (equal rates across
+                    lineages)
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="Varvarclockchoice" style="display: none">
+              <h3>Variable Clock Model</h3>
+              <div style="padding: 10px">
+                <p id="displayvarerfile" style="padding-bottom: 10px"></p>
+                <div>
+                  <h4>Prior Average Substitution Rate Across Lineages</h4>
+                  <div class="slidecontainer" id="slide1">
+                    <form>
+                      <input
+                        id="lineagemeanratealphaslider"
+                        type="range"
+                        name="amountRange"
+                        min="0.001"
+                        step="0.01"
+                        max="10"
+                        value="0.001"
+                      />
+                      <input
+                        id="lineagemeanratealphatext"
+                        type="number"
+                        name="amountInput"
+                        min="0.001"
+                        step="0.01"
+                        max="10"
+                        value="0.001"
+                      /><span style="margin-left: 2px"
+                        >:Alpha (Average Rate)</span
+                      >
+                    </form>
+                  </div>
+                  <div class="slidecontainer" id="slide2">
+                    <form>
+                      <input
+                        id="lineagemeanratebetaslider"
+                        type="range"
+                        name="amountRange"
+                        min="0.001"
+                        step="0.01"
+                        max="10"
+                        value="1.0"
+                      />
+                      <input
+                        id="lineagemeanratebetatext"
+                        type="number"
+                        name="amountInput"
+                        min="0.001"
+                        step="0.01"
+                        max="10"
+                        value="1.0"
+                      />
+                      <span style="margin-left: 2px">:Beta (Average Rate)</span>
+                    </form>
+                    <div id="lineagemeanvarmu">
+                      <p>Mean: 0.001 Var: 0.001</p>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h4>Rate Concentration Parameter</h4>
+                  <div class="slidecontainer" id="slide3">
+                    <form>
+                      <input
+                        id="concentrationslider"
+                        type="range"
+                        name="amountRange"
+                        min="0.01"
+                        step="0.01"
+                        max="10"
+                        value="1.0"
+                      />
+                      <input
+                        id="concentrationtext"
+                        type="number"
+                        name="amountInput"
+                        min="0.01"
+                        step="0.01"
+                        max="10"
+                        value="1.0"
+                      /><span style="margin-left: 2px"
+                        >:Rate Concentration</span
+                      >
+                    </form>
+                  </div>
+                  <h4>Prior on Variance of Clock Among Loci</h4>
+                  <div style="padding: 10px">
+                    <p id="displayvarerfile" style="padding-bottom: 10px"></p>
+                    <form style="display: inline">
+                       
+                      <input
+                        type="radio"
+                        id="clocklocusiid"
+                        name="dataType"
+                        value="0"
+                      />
+                        <label for="clocklocusiid">IID</label>  
+                      <input
+                        type="radio"
+                        id="clocklocusdir"
+                        name="dataType"
+                        value="1"
+                        checked="checked"
+                      />
+                        <label for="clocklocusdir">Dirichlet</label>
+                    </form>
+                  </div>
+                  <h4>Rate Distribution Among Branches</h4>
+                  <div style="padding: 10px">
+                    <p id="displayvarerfile" style="padding-bottom: 10px"></p>
+
+                    <form style="display: inline">
+                       
+                      <input
+                        type="radio"
+                        id="lineagegammaprior"
+                        name="dataType"
+                        value="0"
+                        checked="checked"
+                      />
+                        <label for="lineagegammaprior">Gamma</label>  
+                      <input
+                        type="radio"
+                        id="lineageLNprior"
+                        name="dataType"
+                        value="1"
+                      />
+                        <label for="lineageLNprior">Log-normal</label>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vargui" id="guimodel" style="display: none">
+          <h2>model</h2>
+          <p>
+            Specifies the DNA or AA substituion model to be used. If the Custom
+            option is used a filename should be provided. The Custom file should
+            contain an entry on each line of the form: <br />
+            <code>locus_index datatype model</code>.
+          </p>
+          <div class="guivarbox">
+            <div>
+              <h3>Data Type</h3>
+              <form style="display: inline">
+                 
+                <input
+                  type="radio"
+                  id="dna"
+                  name="dataType"
+                  value="DNA"
+                  checked="checked"
+                />
+                  <label for="dna">DNA</label>  
+                <input type="radio" id="aa" name="dataType" value="Protein" />  
+                <label for="aa">Protein</label>  
+                <input
+                  type="radio"
+                  id="custom"
+                  name="dataType"
+                  value="Custom"
+                />
+                  <label for="custom">Custom</label>
+              </form>
+            </div>
+            <div id="DNAmodelchoice" style="display: inline-block">
+              <h3>DNA Substitution Model</h3>
+              <form>
+                <input
+                  type="radio"
+                  id="jc69"
+                  name="substType"
+                  value="JC69"
+                  checked="checked"
+                />
+                <label for="jc69">JC69</label><br />
+                <input type="radio" id="k80" name="substType" value="K80" />
+                <label for="k80">K80</label><br />
+                <input type="radio" id="f81" name="substType" value="F81" />
+                <label for="f81">F81</label><br />
+                <input type="radio" id="hky" name="substType" value="HKY" />
+                <label for="hky">HKY</label><br />
+                <input type="radio" id="t92" name="substType" value="T92" />
+                <label for="t92">T92</label><br />
+                <input type="radio" id="tn93" name="substType" value="TN93" />
+                <label for="tn93">TN93</label><br />
+                <input type="radio" id="f84" name="substType" value="F84" />
+                <label for="f84">F84</label><br />
+                <input type="radio" id="gtr" name="substType" value="GTR" />
+                <label for="GTR">GTR</label>
+              </form>
+            </div>
+            <div id="AAmodelchoice" style="display: none">
+              <h3>AA Substitution Model</h3>
+              <form>
+                <input
+                  type="radio"
+                  id="blosum62"
+                  name="substType"
+                  value="BLOSUM62"
+                  checked="checked"
+                />
+                <label for="blosum62">BLOSUM62</label><br />
+                <input type="radio" id="cprev" name="substType" value="CPREV" />
+                <label for="cprev">CPREV</label><br />
+                <input type="radio" id="rtrev" name="substType" value="RTREV" />
+                <label for="rtrev">RTREV</label><br />
+                <input
+                  type="radio"
+                  id="dayhoff"
+                  name="substType"
+                  value="DAYHOFF"
+                />
+                <label for="dayhoff">DAYHOFF</label><br />
+                <input type="radio" id="dcmut" name="substType" value="DCMUT" />
+                <label for="dcmut">DCMUT</label><br />
+                <input type="radio" id="flu" name="substType" value="FLU" />
+                <label for="flu">FLU</label><br />
+                <input type="radio" id="hivb" name="substType" value="HIVB" />
+                <label for="hivb">HIVB</label><br />
+                <input type="radio" id="hivw" name="substType" value="HIVW" />
+                <label for="hivw">HIVW</label><br />
+                <input type="radio" id="jtt" name="substType" value="JTT" />
+                <label for="jtt">JTT</label><br />
+                <input
+                  type="radio"
+                  id="jttdcmut"
+                  name="substType"
+                  value="JTTDCMUT"
+                />
+                <label for="jttdcmut">JTTDCMUT</label><br />
+                <input type="radio" id="lg" name="substType" value="LG" />
+                <label for="lg">LG</label><br />
+                <input type="radio" id="mtart" name="substType" value="MTART" />
+                <label for="mtart">MTART</label><br />
+                <input type="radio" id="mtmam" name="substType" value="MTMAM" />
+                <label for="mtmam">MTMAM</label><br />
+                <input type="radio" id="mtzoa" name="substType" value="MTZOA" />
+                <label for="mtzoa">MTZOA</label><br />
+                <input type="radio" id="mtrev" name="substType" value="MTREV" />
+                <label for="mtrev">MTREV</label><br />
+                <input type="radio" id="pmb" name="substType" value="PMB" />
+                <label for="pmb">PMB</label><br />
+                <input
+                  type="radio"
+                  id="stmrev"
+                  name="substType"
+                  value="STMREV"
+                />
+                <label for="stmrev">STMREV</label><br />
+                <input type="radio" id="vt" name="substType" value="VT" />
+                <label for="vt">VT</label><br />
+                <input type="radio" id="wag" name="substType" value="WAG" />
+                <label for="wag">WAG</label><br />
+              </form>
+            </div>
+            <div id="Custommodelchoice" style="display: none">
+              <h3>Custom Model</h3>
+              <div style="padding: 10px">
+                <p id="displaycustomfile" style="padding-bottom: 10px"></p>
+                <div>
+                  <p>File name:</p>
+                  <input id="choosecustomfiletext" type="text" /><button
+                    id="choosecustomfilesave"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vargui" id="guispeciesandtree" style="display: none">
+          <h2>species&tree</h2>
+          <p>
+            Description of species names, maximum number of sequences per
+            species, and the species tree topology. The species tree is either
+            the starting tree (for analyses A10, A11), the fixed tree for
+            inferring demographic parameters (analysis A00), or the guide tree
+            for delimitation (analysis A01). This snippet is automatically
+            completed when a Imap file is specified using the REQUIRED
+            (ND)::Imapfile menu item.
+          </p>
+          <div class="guivarbox">
+            <div id="speciesandtreedetails">
+              <p>
+                No Imap file. Configuring the Imapfile control file variable
+                will autocomplete the species&tree control file variable.
+              </p>
+            </div>
+            <div id="satTree" style="display: none; padding: 10px">
+              <button id="randomTree">Generate random tree</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="vargui" id="guiphase" style="display: none">
+          <h2>phase</h2>
+          <p>
+            Specifies whether sequence data are phased or unphased for each
+            species. The default is phased. This snippet is automatically made
+            available for specifying the phase of individual species when a Imap
+            file is specified using the REQUIRED (ND)::Imapfile menu item.
+          </p>
+          <div class="guivarbox">
+            <div id="phasedetails">
+              <p>
+                No Imap file (default: all species are phased). Configuring the
+                Imapfile control file variable will make the options for
+                specifying the phase of each species available.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="vargui" id="guitauprior" style="display: none">
+          <h2>tauprior</h2>
+          <p>
+            Specify the parameters alpha and beta of the gamma prior
+            distribution for tau (age of root of species tree) in units of
+            expected substitutions per site.
+          </p>
+          <div class="priorbox">
+            <div id="taupriorgraph" class="priorplot"></div>
+            <div class="slidecontainer" id="slide1">
+              <form>
+                <input
+                  id="taualphaslider"
+                  type="range"
+                  name="amountRange"
+                  min="0.01"
+                  step="0.01"
+                  max="10"
+                  value="0.01"
+                />
+                <input
+                  id="taualphatext"
+                  type="number"
+                  name="amountInput"
+                  min="0.01"
+                  step="0.01"
+                  max="10"
+                  value="0.01"
+                /><span style="margin-left: 2px">:Alpha</span>
+              </form>
+              <form>
+                <input
+                  id="taubetaslider"
+                  type="range"
+                  name="amountRange"
+                  min="1"
+                  step="0.01"
+                  max="10000"
+                  value="1"
+                />
+                <input
+                  id="taubetatext"
+                  type="number"
+                  name="amountInput"
+                  min="1"
+                  step="0.01"
+                  max="10000"
+                  value="1"
+                /><span style="margin-left: 2px">:Beta</span>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="vargui" id="guialphaprior" style="display: none">
+          <h2>alphaprior</h2>
+          <p>
+            Specify the parameters alpha and beta of the gamma prior
+            distribution for the shape parameter alpha and the number of rate
+            categories to use when modeling among-site rate variation using
+            discrete gamma distribution.
+          </p>
+          <div class="priorbox">
+            <div id="alphapriorgraph" class="priorplot"></div>
+            <div class="slidecontainer" id="slide1">
+              <form>
+                <input
+                  id="alphaalphaslider"
+                  type="range"
+                  name="amountRange"
+                  min="0.01"
+                  step="0.01"
+                  max="10"
+                  value="0.01"
+                />
+                <input
+                  id="alphaalphatext"
+                  type="number"
+                  name="amountInput"
+                  min="0.01"
+                  step="0.01"
+                  max="10"
+                  value="0.01"
+                /><span style="margin-left: 2px">:Alpha</span>
+              </form>
+              <form>
+                <input
+                  id="alphabetaslider"
+                  type="range"
+                  name="amountRange"
+                  min="1"
+                  step="0.01"
+                  max="10000"
+                  value="1"
+                />
+                <input
+                  id="alphabetatext"
+                  type="number"
+                  name="amountInput"
+                  min="1"
+                  step="0.01"
+                  max="10000"
+                  value="1"
+                /><span style="margin-left: 2px">:Beta</span>
+              </form>
+              <form>
+                <input
+                  id="ncattext"
+                  type="number"
+                  name="amountInput"
+                  min="1"
+                  step="1"
+                  max="1000"
+                  value="1"
+                /><span style="margin-left: 2px"
+                  >:No Categories (Discrete Gamma Approximation)</span
+                >
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="vargui" id="guithetaprior" style="display: none">
+          <h2>thetaprior</h2>
+          <p>
+            Specifies the distribution model and parameters of the prior
+            distribution on the contemporary and ancestral population parameters
+            θ and whether the MCMC generates a posterior distribution of the θ
+            parameters, or the integration is performed analytically (no
+            estimates of θ are output).
+          </p>
+          <div class="priorbox">
+            <div>
+              <h3>Prior Distribution Model</h3>
+              <form style="display: inline">
+                 
+                <input
+                  type="radio"
+                  id="gammatheta"
+                  name="dataType"
+                  value="Gamma"
+                  checked="checked"
+                />
+                  <label for="gammatheta">Gamma</label>  
+                <input
+                  type="radio"
+                  id="invgammatheta"
+                  name="dataType"
+                  value="InverseGamma"
+                />
+                  <label for="invgammatheta">Inverse Gamma</label>  
+                <input
+                  type="radio"
+                  id="betatheta"
+                  name="dataType"
+                  value="BetaTheta"
+                />
+                  <label for="betatheta">Beta</label>
+              </form>
+            </div>
+
+            <div id="thetagammapriorbox" style="display: block">
+              <div id="thetagammagraph" class="priorplot"></div>
+              <div class="slidecontainer" id="gslide">
+                <form>
+                  <input
+                    id="thetagammaalphaslider"
+                    type="range"
+                    name="amountRange"
+                    min="0.01"
+                    step="0.01"
+                    max="10"
+                    value="0.01"
+                  />
+                  <input
+                    id="thetagammaalphatext"
+                    type="number"
+                    name="amountInput"
+                    min="0.01"
+                    step="0.01"
+                    max="10"
+                    value="0.01"
+                  /><span style="margin-left: 2px">:Alpha</span>
+                </form>
+                <form>
+                  <input
+                    id="thetagammabetaslider"
+                    type="range"
+                    name="amountRange"
+                    min="1"
+                    step="0.01"
+                    max="10000"
+                    value="1"
+                  />
+                  <input
+                    id="thetagammabetatext"
+                    type="number"
+                    name="amountInput"
+                    min="1"
+                    step="0.01"
+                    max="10000"
+                    value="1"
+                  /><span style="margin-left: 2px">:Beta</span>
+                </form>
+              </div>
+            </div>
+
+            <div id="thetainvgammapriorbox" style="display: none">
+              <div id="thetainvgammagraph" class="priorplot"></div>
+              <div class="slidecontainer" id="igslide">
+                <form>
+                  <input
+                    id="thetainvgammaalphaslider"
+                    type="range"
+                    name="amountRange"
+                    min="2.01"
+                    step="0.01"
+                    max="1000"
+                    value="3"
+                  />
+                  <input
+                    id="thetainvgammaalphatext"
+                    type="number"
+                    name="amountInput"
+                    min="2.01"
+                    step="0.01"
+                    max="1000"
+                    value="3"
+                  /><span style="margin-left: 2px">:Alpha</span>
+                </form>
+                <form>
+                  <input
+                    id="thetainvgammabetaslider"
+                    type="range"
+                    name="amountRange"
+                    min="0.00001"
+                    step="0.00001"
+                    max="10000"
+                    value="0.01"
+                  />
+                  <input
+                    id="thetainvgammabetatext"
+                    type="number"
+                    name="amountInput"
+                    min="0.00001"
+                    step="0.00001"
+                    max="10000"
+                    value="0.01"
+                  /><span style="margin-left: 2px">:Beta</span>
+                </form>
+              </div>
+              <div id="analyticalbox">
+                <label class="switch">
+                  <input type="checkbox" id="analyticalchk" />
+                  <span class="slider"></span>
+                </label>
+                <p id="analyticalOnMsg" style="display: none">
+                  ON: Integration of θ
+                </p>
+                <p id="analyticalOffMsg" style="display: inline-block">
+                  OFF: Estimation of θ
+                </p>
+              </div>
+            </div>
+
+            <div id="thetabetapriorbox" style="display: none">
+              <div class="slidecontainer" id="gslide">
+                <form>
+                  <input
+                    id="thetabetaalphaslider"
+                    type="range"
+                    name="amountRange"
+                    min="0.000001"
+                    step="0.00001"
+                    max="1000"
+                    value="1.0"
+                  />
+                  <input
+                    id="thetabetaalphatext"
+                    type="number"
+                    name="amountInput"
+                    min="0.000001"
+                    step="0.00001"
+                    max="1000"
+                    value="1.0"
+                  /><span style="margin-left: 2px">:Alpha</span>
+                </form>
+                <form>
+                  <input
+                    id="thetabetabetaslider"
+                    type="range"
+                    name="amountRange"
+                    min="0.001"
+                    step="0.001"
+                    max="1000"
+                    value="2.0"
+                  />
+                  <input
+                    id="thetabetabetatext"
+                    type="number"
+                    name="amountInput"
+                    min="0.001"
+                    step="0.001"
+                    max="1000"
+                    value="2.0"
+                  /><span style="margin-left: 2px">:Beta</span>
+                </form>
+                <form>
+                  <input
+                    id="thetabetaminslider"
+                    type="range"
+                    name="amountRange"
+                    min="0"
+                    step="0.00001"
+                    max="1"
+                    value="0.0001"
+                  />
+                  <input
+                    id="thetabetamintext"
+                    type="number"
+                    name="amountInput"
+                    min="0"
+                    step="0.00001"
+                    max="1"
+                    value="0.0001"
+                  /><span style="margin-left: 2px">:Minimum</span>
+                </form>
+                <form>
+                  <input
+                    id="thetabetamaxslider"
+                    type="range"
+                    name="amountRange"
+                    min="0.00001"
+                    step="0.0001"
+                    max="1"
+                    value="0.01"
+                  />
+                  <input
+                    id="thetabetamaxtext"
+                    type="number"
+                    name="amountInput"
+                    min="0.00001"
+                    step="0.0001"
+                    max="1"
+                    value="0.01"
+                  /><span style="margin-left: 2px">:Maximum</span>
+                </form>
+              </div>
+              <div id="tbmeanvar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item snippet" id="snippetbox">
+        <div id="snippetheader"></div>
+
+        <div class="item snippet" id="snippetdisplay"></div>
+      </div>
+      <div class="item controlpanel"></div>
+    </div>
+
+    <script>
+      const { ipcRenderer } = require("electron");
+    </script>
+    <script src="../js/project/data.js"></script>
+    <script src="../js/snippet/skeleton.js"></script>
+    <script src="../js/snippet/cfile.jsm" type="module"></script>
+    <script src="../js/snippet/menus.jsm" type="module"></script>
+  </body>
+</html>

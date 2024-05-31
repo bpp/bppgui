@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline'"
+    />
+    <title>Conphyig :: Editor</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      @font-face {
+        font-family: "Fira Mono";
+        src: url("../fonts/FiraMono-Regular.ttf") format("truetype");
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col 12" id="titlebar">
+          <div id="projecttitlebox"></div>
+          <div id="filetitlebox"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s3" id="leftpanel">
+          <div class="treeview" style="display: none">
+            <details class="project">
+              <summary class="project">Project 1</summary>
+              <details class="seqfiles">
+                <summary class="seqfiles">SEQUENCE_FILTERS</summary>
+                <details class="sfiles">
+                  <summary class="sfiles">stest1</summary>
+                </details>
+              </details>
+              <details class="mapfiles">
+                <summary class="mapfiles">MAP_FILTERS</summary>
+                <details class="mfiles">
+                  <summary>test1</summary>
+                </details>
+                <details class="mfiles">
+                  <summary>test2a</summary>
+                </details>
+              </details>
+            </details>
+          </div>
+          <div id="editcontrols">
+            <div id="buttonbox">
+              <button
+                class="btn grey darken-3"
+                id="synchk_button"
+                style="display: none"
+              >
+                check syntax
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="editor" class="col s9" style="display: none">
+          <p>Open a Project or Control File to Begin</p>
+        </div>
+        <div id="welcome_screen" class="col s9">
+          <h2>Conphyig: Filetools</h2>
+          <p>Open a control file or project to begin.</p>
+        </div>
+
+        <div
+          id="mapconfig"
+          class="col s9"
+          style="display: none; color: white; position: absolute"
+        >
+          <p>Open a Project or Control File to Begin</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12" id="modeline"></div>
+      </div>
+    </div>
+
+    <script
+      src="../js/external/ace/src-noconflict/ace.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script src="../js/external/ace/src-noconflict/ext-language_tools.js"></script>
+    <script src="../js/project/data.js"></script>
+    <script src="../js/linter/linter.js"></script>
+    <script src="../js/snippet/skeleton.js"></script>
+    -->
+
+    <!-- temporary control file data for debugging-->
+    <!-- <script src="../../tests/test_cfile_data.js"></script> -->
+
+    <script>
+      const { ipcRenderer } = require("electron");
+      var project_name = "";
+      var currEdContent = "";
+      var cfileopen = false;
+      var bpp_snippets = bpp_snippets_skeleton;
+
+      const ptitle = document.getElementById("projecttitlebox");
+      ptitle.innerHTML = "";
+
+      var control_file_name = "";
+      var control_file_path = "";
+      const ftitle = document.getElementById("filetitlebox");
+      ftitle.innerHTML = "";
+
+      const mapConfig = document.getElementById("mapconfig");
+      const editorView = document.getElementById("editor");
+      const welcomeScreen = document.getElementById("welcome_screen");
+
+      ace.require("ace/ext/language_tools");
+      var editor = ace.edit("editor");
+      editor.setTheme("ace/theme/vibrant_ink");
+      document.getElementById("editor").style.fontSize = "16px";
+      editor.session.setMode("ace/mode/bpp");
+      editor.setKeyboardHandler("ace/keyboard/emacs");
+      editor.setOptions({
+        enableBasicAutocompletion: true,
+        enableSnippets: true,
+        enableLiveAutocompletion: false,
+      });
+
+      // syntax checking button
+      var cbutton = document.getElementById("synchk_button");
+      cbutton.addEventListener("click", () => {
+        let synchk = syntaxCheck(editor.getValue());
+        if (synchk.error) {
+          editor.gotoLine(synchk.lineno, 1);
+        }
+        document.getElementById("modeline").innerHTML = synchk.message;
+      });
+
+      const snippetManager = ace.require("ace/snippets").snippetManager;
+
+      snippetManager.register(bpp_snippets, "bpp");
+
+      // receive newly opened project sequence file
+
+      ipcRenderer.on("newprojectfile", (event, arg) => {
+        main_project_file = arg;
+        editor.setValue(main_project_file);
+      });
+
+      // receive newly opened (unnamed) control file
+
+      ipcRenderer.on("opencontrolfile", (event, arg) => {
+        if (arg.content === undefined) {
+          open_ctrl_file = "";
+          control_file_path = undefined;
+          control_file_name = "";
+        } else {
+          let match = [];
+          open_ctrl_file = arg.content;
+          control_file_path = arg.path;
+          match = Rstrip.exec(arg.path);
+          control_file_name = match[1];
+        }
+        ftitle.innerHTML = `<p>:: Editing Control File => ${control_file_name}</p>`;
+        editor.setValue(open_ctrl_file, -1);
+        editorView.setAttribute("style", "display:block; font-size: 12pt");
+        welcomeScreen.setAttribute("style", "display: none");
+        cbutton.setAttribute("style", "display:block");
+        document.getElementById("modeline").innerHTML = "";
+        cfileopen = true;
+      });
+
+      // respond to request for file data to save
+
+      ipcRenderer.on("savecontrolfile", (event, arg) => {
+        currEdContent = editor.getValue();
+        ipcRenderer.send("savecontrolfile", {
+          cfilePath: control_file_path,
+          cfileContent: currEdContent,
+        });
+      });
+
+      ipcRenderer.on("savecontrolfileas", (event, arg) => {
+        currEdContent = editor.getValue();
+        ipcRenderer.send("savecontrolfileas", {
+          cfilePath: control_file_path,
+          cfileContent: currEdContent,
+        });
+      });
+
+      ipcRenderer.on("controlfilename", (event, arg) => {
+        if (arg) {
+          control_file_path = arg;
+          let match = Rstrip.exec(arg);
+          control_file_name = match[1];
+          ftitle.innerHTML = `<p>:: Editing Control File => ${control_file_name}</p>`;
+        }
+      });
+
+      ipcRenderer.on("closecontrolfile", (event, arg) => {
+        cfileopen = false;
+        control_file_path = "";
+        open_ctrl_file = "";
+        control_file_name = "";
+        document.getElementById("modeline").innerHTML = "";
+        ftitle.innerHTML = "";
+        editorView.setAttribute("style", "display: none");
+        welcomeScreen.setAttribute("style", "display: block");
+        cbutton.setAttribute("style", "display: none");
+        editor.setValue("");
+      });
+
+      ipcRenderer.on("snippets", (event, arg) => {
+        bpp_snippets = arg;
+        snippetManager.register(bpp_snippets, "bpp");
+      });
+    </script>
+  </body>
+</html>

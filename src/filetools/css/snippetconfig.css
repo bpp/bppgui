@@ -1,0 +1,276 @@
+* {
+  margin: 0px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 250px 500px;
+  grid-template-rows: 40px 550px 120px 30px;
+  grid-template-areas:
+    "fn fn fn"
+    "mn guicf guicf"
+    "mn snp snp"
+    "cp cp cp";
+  gap: 0px;
+}
+
+.snpfilename {
+  grid-area: fn;
+}
+
+#snpfn {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 40px;
+  width: 100%;
+  color: yellow;
+  font-family: "Fira Mono";
+  font-size: 10pt;
+  background-color: rgb(39, 39, 42);
+}
+
+.smenu {
+  grid-area: mn;
+  color: white;
+  font-family: "Fira Mono";
+  display: inline-block;
+  padding: 5px;
+}
+.guiconfigurator {
+  grid-area: guicf;
+  border-top: solid darkgrey 0.1px;
+}
+.snippet {
+  grid-area: snp;
+}
+.controlpanel {
+  grid-area: cp;
+  border: solid white 0.1px;
+}
+.item {
+  background-color: #000000;
+  color: white;
+}
+.vargui {
+  padding: 5px;
+  color: yellow;
+  font-family: "Fira Mono";
+  font-size: 10pt;
+}
+
+#snippetbox {
+  padding: 10px;
+  color: green;
+  font-family: "Fira Mono";
+  font-size: 12pt;
+}
+
+#snippetdisplay {
+  padding: 5px;
+  color: green;
+  font-family: "Fira Mono";
+  font-size: 12pt;
+}
+
+.sradio {
+  padding: 10px;
+  border: yellow solid 0.1px;
+  margin: 10px;
+}
+
+.priorplot {
+  height: 250px;
+  width: 400;
+  background-color: white;
+  color: black;
+  margin: 5px;
+}
+
+#alphaslider {
+  display: inline-block;
+}
+
+#betaslider {
+  display: inline-block;
+}
+
+.slidecontainer {
+  margin-left: 5px;
+}
+
+#Imapfileopenbutton {
+  background-color: #0c074d;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.imapbox {
+  padding: 10px;
+  border: yellow solid 0.1px;
+  margin: 10px;
+}
+
+.guivarbox {
+  padding: 10px;
+  border: yellow solid 0.1px;
+  margin: 10px;
+}
+
+/* Properties for Project Tree Browser Begin */
+
+details details {
+  margin-left: 10pt;
+}
+summary[selected="true"] {
+  background-color: grey;
+}
+summary {
+  cursor: pointer;
+}
+/* summary:hover {
+  background-color: #c0e0ff;
+} */
+summary::before {
+  content: "[+]";
+}
+details[class="cfdata"][open] summary[class="cfdata"]::before {
+  content: "[-]";
+}
+details[class="cfdepfiles"] summary::before {
+  content: "";
+  color: red;
+}
+details[class="cfvars"][open] summary[class="cfvars"]::before {
+  content: "[-]";
+}
+details[class="reqndef"][open] summary[class="reqndef"]::before {
+  content: "[-]";
+}
+details[class="rndefsnp"] summary::before {
+  content: "";
+  color: red;
+}
+details[class="reqdef"][open] summary[class="reqdef"]::before {
+  content: "[-]";
+}
+details[class="rdefsnp"] summary::before {
+  content: "";
+  color: rgb(59, 99, 209);
+}
+details[class="opts"][open] summary[class="opts"]::before {
+  content: "[-]";
+}
+details[class="optsnp"] summary::before {
+  content: "";
+  color: rgb(59, 99, 209);
+}
+
+summary {
+  list-style: none;
+}
+
+.flags {
+  padding-right: 5px;
+  display: inline-block;
+}
+
+/* Hide the marker (if possible) if a node is a leaf node */
+
+summary:only-child::-webkit-details-marker {
+  color: transparent;
+}
+#display {
+  display: inline-block;
+  vertical-align: top;
+}
+#display {
+  font-family: "Fira Mono";
+}
+.label {
+  font-size: 10pt;
+  font-weight: bold;
+}
+.descr {
+  font-size: 10pt;
+}
+
+/* Properties for Project Tree Browser End */
+
+/* onoffbox */
+
+.onoffbox {
+  padding: 10px;
+  border: yellow solid 0.1px;
+  margin: 10px;
+}
+
+.priorbox {
+  padding: 10px;
+  border: yellow solid 0.1px;
+  margin: 10px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 26px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #094d85;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #094d85;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Text box input for finetune */
+
+.finetuneszval {
+  width: 50px;
+}

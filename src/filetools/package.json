@@ -1,0 +1,55 @@
+{
+  "name": "Conphyig-filetools",
+  "version": "1.0.0",
+  "description": "App for optimizing image sizes.",
+  "main": "js/main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "dev": "nodemon --exec electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "Bruce Rannala",
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.65",
+    "@electron-forge/maker-deb": "^6.0.0-beta.65",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.65",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.65",
+    "@electron-forge/maker-zip": "^6.0.0-beta.65",
+    "electron": "^16.0.7",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "@stdlib/stats-base-dists": "^0.0.6",
+    "electron-squirrel-startup": "^1.0.0",
+    "function-plot": "^1.22.8"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "image_shrink"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
