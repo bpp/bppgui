@@ -1,5 +1,5 @@
 # bppgui
-Graphical tools for editing input files and viewing output of bpp program
+Cross-platform graphical tools for editing input files and viewing output of the bpp program
 
 ## Overview
 This project includes a suite of cross-platform graphical tools for use with bpp (written using [Electron](https://www.electronjs.org/)). There will be multiple programs
